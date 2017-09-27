@@ -7,6 +7,6 @@ https://www.princexml.com/download/
 After installing princexml, you should be able to perform the following actions in order to generate the PDF
 1. from the shell/command line you need to navigate to the folder of the specific implementation guide
 2. Modify the script (the date of the PDF-document name) as needed
-3. Copy & paste the contents from the file "prince_comm_*" into the command line
+3. Copy & paste the contents from the file "prince_command_*" into the command line
 4. Enter
 
