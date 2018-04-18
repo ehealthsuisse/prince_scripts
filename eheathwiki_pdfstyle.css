@@ -17,9 +17,9 @@ a.stub, a.new {
 	background-color:#f9f9f9;*/
 	padding:5px;
 }
-.tocindent {
+/*.tocindent {
 	margin-left: 2em;
-}
+}*/
 .tocline {
 	margin-bottom: 0px;
 }
@@ -151,6 +151,7 @@ a:link, a:visited {
 #content a.external.text:after, #content a.external.autonumber:after {
 	/* Expand URLs for printing */
     content: " (" attr(href) ") ";
+    color: #0047b3;
 }
 #globalWrapper {
 	width: 100% !important;
@@ -396,12 +397,6 @@ td, tbody th {
 	border-width:     0 thin;
 	text-align:              left;*/
 }
-/*
- *	Überschriften
- */
-h1, h2, h3, h4, h5, h6 {
-	font-weight:             bold;
-}
 h1 {
 	page-break-before: always;
 	font-size:        1.4em;
@@ -427,7 +422,7 @@ h6 {
 a {
 	text-decoration: none !important;
 	background-color: white;
-	color: black;
+	color: #0066ff;
 }
 /*==================================================
 style-sheets.de
@@ -451,20 +446,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
 	font-weight: bold;
 	margin: .75em 0 .5em 0;
+	color: black;
 }
 h2 {
 	font-size: 1.3em;
 	/*text-transform: uppercase; 
     letter-spacing: .05em;*/
-    color: #4F81BD;
 }
 h3 {
 	font-size: 1.1em;
-	color: #4F81BD;
 }
 h4 {
 	font-size: 1.0em;
-	color: #4F81BD;
 }
 h5 {
 	font-size: 1.0em;
@@ -565,9 +558,8 @@ div.beispiel {
 	padding: 3pt;
 }
 h1 {
-	color: #345A8A;
 	padding-bottom: 1px;
-	border-bottom: 1px #aaaaaa solid;
+	/*border-bottom: 1px #aaaaaa solid;*/
 }
 
 #firstHeading
@@ -656,7 +648,6 @@ img.left {
     /* ruler sidebar */
   }
   @bottom-right {
-      content: "Seite " counter(page) " von " counter(pages);
     vertical-align: top;
     padding-top: 1em;
     border-top: thin solid gray;
@@ -868,15 +859,23 @@ h4 {
 
 h1:before {
     content: counter(h1) " ";
+    display: inline-block;
+    width: 65px; 
 }
 h2:before {
     content: counter(h1) "." counter(h2) " ";
+    display: inline-block;
+    width: 65x; 
 }
 h3:before {
     content: counter(h1) "." counter(h2) "." counter(h3) " ";
+    display: inline-block;
+    width: 65px; 
 }
 h4:before {
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+    display: inline-block;
+    width: 65px; 
 }
 /*h5:before {
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
@@ -900,13 +899,12 @@ p11111:before {
 	display: none; 
 }
 #toctitle {
-	string-set: toctt "Inhaltsverzeichnis";
 	content: string(toctt);
 	font-size: 1.4em;
 	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
 	font-weight: bold;
 	margin: .75em 0 .5em 0;
-    color: #4F81BD;
+    color: black;
 }
 
 /*
@@ -979,6 +977,10 @@ ul.toc > li.chapter::before {
 .toc li { 
   list-style-type: none;
 }
+#toc ul ul, .toc ul ul, #toc ul li, #toc li {
+	margin: 0; 
+	padding: 0;
+}
 
 #bodyContent li.toclevel-1 a:after {
   content: leader('.') target-counter(attr(href, url), page);
@@ -991,13 +993,20 @@ ul.toc > li.chapter::before {
     font-weight: normal;
 }
 
+#bodyContent .toctext:before {
+	display: inline-block;
+    width: 65px; 
+}
+
 #bodyContent li.toclevel-1 .toctext:before {
     content: counter(toc_chapter) " ";
+    
 }
  
 #bodyContent li.toclevel-1  {
     counter-increment: toc_chapter;
     counter-reset: toc_h2;
+    padding-top: 0.7em;
 }
  
 #bodyContent li.toclevel-2 .toctext:before {
@@ -1029,7 +1038,7 @@ ul.toc > li.chapter::before {
  
 #bodyContent li.toclevel-5 .toctext:before {
 	content: counter(toc_chapter) "." counter(toc_h2) "." counter(toc_h3) "." counter(toc_h4) "." counter(toc_h5) " ";
-	counter-increment: toc_h5;
+	counter-increment: toc_h5; 
 }
 
 /* cross references */
@@ -1098,6 +1107,29 @@ ul.index a::after { content: ", " target-counter(attr(href), page); }
 /*
  eHealth Suisse
  */
+
+ h1 {
+	page-break-before: always;
+	font-size:        1.5em;
+	right: 20%;
+}
+h2 {
+	font-size:        1.2em /*; page-break-before: always*/
+	right: 20%;
+}
+h3 {
+	font-size:        1.1em
+}
+h4 {
+	font-size:        1.1em
+}
+h5 {
+	font-size:        1.0em
+}
+h6 {
+	font-size:        1.0em
+}
+ 
 sup.reference a {
     font-size: 0.6em;
 }
@@ -1116,6 +1148,16 @@ table.doc th,
 table.doc p {
     font-size: 1em;
 }
+
+div.pagebreakbefore {
+	page-break-before:always;
+}
+
+sup.reference {
+	page-break-before:never;
+}
+
+
 
 /*==================================================
  CSS style sheet for Wikipedia articles example from princexml.com
