@@ -13,6 +13,8 @@
 # Please do not change the lines below
 d=$(date +%Y%m%d)
 echo $d
+masterStyle=../eheathwiki_pdfstyle.css
+rulerScript=../makeruler.js
 
 # ******************
 # GERMAN
@@ -21,8 +23,9 @@ Source="http://e-health-wiki.ch/index.php/Ehscda:CDA-CH_2017_(specification)"
 Destination="CDA-CH_de_V$d.pdf"
 germanStyle=../lang_de.css
 
+
 # Please do not change the lines below
-prince $Source -v --script makeruler.js --javascript -o $Destination -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000"   -s "http://e-health-wiki.ch/index.php?title=-&action=raw&maxage=18000&gen=css"   -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000" -s $germanStyle -s ../kprint3ohneruler.css
+prince $Source -v --script $rulerScript --javascript -o $Destination -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000"   -s "http://e-health-wiki.ch/index.php?title=-&action=raw&maxage=18000&gen=css"   -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000" -s $germanStyle -s $masterStyle
 
 # ******************
 # FRENCH
@@ -31,4 +34,4 @@ Source="http://e-health-wiki.ch/index.php/Ehscda:CDA-CH_2017_(specification)/fr"
 Destination="CDA-CH_fr_V$d.pdf"
 frenchStyle=../lang_fr.css
 
-prince $Source -v --script makeruler.js --javascript -o $Destination -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000"   -s "http://e-health-wiki.ch/index.php?title=-&action=raw&maxage=18000&gen=css"   -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000" -s $frenchStyle -s ../kprint3ohneruler.css
+prince $Source -v --script $rulerScript --javascript -o $Destination -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000"   -s "http://e-health-wiki.ch/index.php?title=-&action=raw&maxage=18000&gen=css"   -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000" -s $frenchStyle -s $masterStyle

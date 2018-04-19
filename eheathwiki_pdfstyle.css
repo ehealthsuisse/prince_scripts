@@ -865,7 +865,7 @@ h1:before {
 h2:before {
     content: counter(h1) "." counter(h2) " ";
     display: inline-block;
-    width: 65x; 
+    width: 65px; 
 }
 h3:before {
     content: counter(h1) "." counter(h2) "." counter(h3) " ";
