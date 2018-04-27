@@ -22,8 +22,19 @@ function removeHiddenNodesByClass(className){
     var parent = document.getElementByClass(className).parentNode;
     parent.removeChild();
 }
+function crossRef(h1,h2,h3,h4,h5,h6,h7) {
+if (h2 == 0) return h1;
+else if (h3 == 0) return h1 + "." + h2;
+else if (h4 == 0) return h1 + "." + h2 + "." + h3;
+else if (h5 == 0) return h1 + "." + h2 + "." + h3 + "." + h4;
+else if (h6 == 0) return h1 + "." + h2 + "." + h3 + "." + h4 + "." + h5;
+else if (h7 == 0) return h1 + "." + h2 + "." + h3 + "." + h4 + "." + h5 + "." + h6
+else return h1 + "." + h2 + "." + h3 + "." + h4 + "." + h5 + "." + h6 + "." + h7;
+}
 
 
 Prince.addScriptFunc("mycounterstyle", mycounterstyle);
 Prince.addScriptFunc("chbgi", chbgi);
 /*Prince.addScriptFunc("removeHiddenNodesByClass", removeHiddenNodesByClass)*/
+
+Prince.addScriptFunc("crossRefCounter", crossRef);

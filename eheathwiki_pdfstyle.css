@@ -1043,8 +1043,16 @@ ul.toc > li.chapter::before {
 
 /* cross references */
 
-a[href^="#"]::before {
+/*a[href^="#"]::before {
     content: '"' target-counters(attr(href), h1, ".") " ";
+    
+}*/
+a[href^="#"]::before {
+    content: '"' prince-script(crossRefCounter, 
+    target-counter(attr(href), h1), 
+    target-counter(attr(href), h2),target-counter(attr(href), h3), 
+    target-counter(attr(href), h4), target-counter(attr(href), h5), 
+    target-counter(attr(href), h6), target-counter(attr(href), h7)) " ";
     
 }
 a[href^="#"]::after {
@@ -1155,6 +1163,9 @@ div.pagebreakbefore {
 
 sup.reference {
 	page-break-before:never;
+}
+a.image {
+	page-break-after:never;
 }
 
 
