@@ -1168,6 +1168,21 @@ a.image {
 	page-break-after:never;
 }
 
+table.versionbox {
+	width:100%;
+	margin: 0;
+}
+table.versionbox td:nth-child(1) {
+	width: 10%;
+}
+table.versionbox td:nth-child(2),
+table.versionbox td:nth-child(3),
+table.versionbox td:nth-child(4) {
+	width: 30%;
+}
+table.usecase {
+font-size:50%;
+}
 
 
 /*==================================================
