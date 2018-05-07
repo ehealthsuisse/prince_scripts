@@ -1171,6 +1171,7 @@ a.image {
 table.versionbox {
 	width:100%;
 	margin: 0;
+	page-break-after:always;
 }
 table.versionbox td:nth-child(1) {
 	width: 10%;
