@@ -1178,10 +1178,11 @@ table.versionbox td:nth-child(1) {
 }
 table.versionbox td:nth-child(2),
 table.versionbox td:nth-child(3),
-table.versionbox td:nth-child(4) {
-	width: 30%;
+table.versionbox td:nth-child(4),
+table.versionbox td:nth-child(5),  {
+	width: 22.5%;
 }
-table.usecase {
+table.usecase, table.versinbox {
 font-size:50%;
 }
 
