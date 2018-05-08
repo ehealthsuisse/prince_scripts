@@ -9,6 +9,7 @@ REM History:
 REM 20171009: Initial commit by Tony Schaller, medshare GmbH
 REM 20171019: Timestamp calculation before destination variable setting (by Tony Schaller, medshare GmbH)
 REM 20180507: Update for french version and updated css definitions (by Tony Schaller, medshare GmbH)
+REM 20180508: Update file name accordingame scheme ehealth suisse website (by Johannes Gnägi, eHealth Suisse)
 REM 
 REM ********************************************************************************
 
@@ -17,7 +18,7 @@ SET DD=%date:~0,2%
 SET MM=%date:~3,2%
 SET YY=%date:~8,2%
 SET YYYY=%date:~6,4%
-SET DT=%YYYY%%MM%%DD%
+SET DT=%YY%%MM%%DD%
 SET masterStyle=../eheathwiki_pdfstyle.css
 SET rulerScript=../makeruler.js
 SET germanStyle=../lang_de.css
@@ -26,8 +27,8 @@ SET frenchStyle=../lang_fr.css
 REM This is for customizing this script for the given specification
 SET SourceDe=http://e-health-wiki.ch/index.php/Ehscda:CDA-CH_2017_(specification)
 SET SourceFr=http://e-health-wiki.ch/index.php/Ehscda:CDA-CH_2017_(specification)/fr
-SET DestinationDe=CDA-CH_de_V%DT%.pdf 
-SET DestinationFr=CDA-CH_fr_V%DT%.pdf 
+SET DestinationDe=%DT%_CDA-CH_de.pdf
+SET DestinationFr=%DT%_CDA-CH_fr.pdf
 ECHO %DestinationDe%
 ECHO %DestinationFr%
 

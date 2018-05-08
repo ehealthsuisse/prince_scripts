@@ -148,11 +148,6 @@ a:link, a:visited {
 	background: transparent;
 	text-decoration: underline;
 }
-#content a.external.text:after, #content a.external.autonumber:after {
-	/* Expand URLs for printing */
-    content: " (" attr(href) ") ";
-    color: #0047b3;
-}
 #globalWrapper {
 	width: 100% !important;
 	min-width: 0 !important;
@@ -518,9 +513,11 @@ a img {
 
 }*/
 
-/* Innerhalb von Beispielen sind ausgedruckte URLs unerwuenscht */
-.beispiel a:link:after, .beispiel a:link:visited:after {
-	content: "";
+/* Innerhalb von Beispielen und Versionbox sind ausgedruckte URLs unerwuenscht */
+.beispiel a:link:after, .beispiel a:link:visited:after, 
+.versionbox a:link:after, .versionbox a:link:visited:after,
+.versionbox a.external.text:after, .versionbox a.external.autonumber:after {
+	content: none;
 }
 #sitemast {
 	padding-bottom: 1em;
@@ -1040,13 +1037,6 @@ ul.toc > li.chapter::before {
 	content: counter(toc_chapter) "." counter(toc_h2) "." counter(toc_h3) "." counter(toc_h4) "." counter(toc_h5) " ";
 	counter-increment: toc_h5; 
 }
-
-/* cross references */
-
-/*a[href^="#"]::before {
-    content: '"' target-counters(attr(href), h1, ".") " ";
-    
-}*/
 a[href^="#"]::before {
     content: '"' prince-script(crossRefCounter, 
     target-counter(attr(href), h1), 
@@ -1072,25 +1062,6 @@ sup.reference a[href^="#"]::before,
 sup.reference a[href^="#"]::after  {
 content: none;
 }
-
-/*
-a.pageref::after { content: " on page " target-counter(attr(href), page); }
-a.chapref::before { content: " Chapter " target-counter(attr(href), chapter) ", "; }
-
-*/
-
-/* index */
-
-/*
-ul.index { 
-  list-style-type: none;
-  margin: 0; padding: 0;
-  column-count: 2;
-  column-gap: 1em;
-}
-
-ul.index a::after { content: ", " target-counter(attr(href), page); }
-*/
 
 .printfooter {
 	display: none;
@@ -1173,19 +1144,31 @@ table.versionbox {
 	margin: 0;
 	page-break-after:always;
 }
-table.versionbox td:nth-child(1) {
-	width: 10%;
+table.versionbox td {
+	vertical-align: top;
+	text-align: left;
 }
-table.versionbox td:nth-child(2),
-table.versionbox td:nth-child(3),
-table.versionbox td:nth-child(4),
-table.versionbox td:nth-child(5),  {
-	width: 22.5%;
+table.versionbox td:nth-child(1),
+table.versionbox td:nth-child(2) {
+	width: 50px;
 }
-table.usecase, table.versinbox {
+table.versionbox td:nth-child(5)  {
+	width: 150px;;
+}*/
+table.usecase {
 font-size:50%;
 }
 
+table.versionbox {
+font-size:80%;
+}
+
+a.external.text, a.external.autonumber, a.external:link:visited {
+ color:#002CA7 !important;
+}
+a.external.text:after, a.external.autonumber:after, a:link:visited:after {
+    content:"" !important;
+}
 
 /*==================================================
  CSS style sheet for Wikipedia articles example from princexml.com
