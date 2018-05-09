@@ -1,0 +1,13 @@
+/*
+** Prince Stylesheet for localized output of Pages and TOC
+** Copyright Johannes Gnaegi, eHealth Suisse
+*/
+@page {
+  @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+  }
+}
+
+#toctitle {
+	string-set: toctt "Table of contents";
+}
