@@ -1,0 +1,10 @@
+/*
+** Prince Stylesheet for localized output of Pages and TOC
+** Copyright Johannes Gnaegi, eHealth Suisse
+*/
+@page {
+    @top-left {
+    	content: "Ergänzung 2 zu Anhang 4 der EPDV-EDI: eMedikation";
+    	border-bottom: thin solid gray;
+    }
+} 

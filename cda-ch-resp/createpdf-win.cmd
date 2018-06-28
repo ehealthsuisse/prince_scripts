@@ -17,7 +17,7 @@ SET DD=%date:~0,2%
 SET MM=%date:~3,2%
 SET YY=%date:~8,2%
 SET YYYY=%date:~6,4%
-SET DT=%YYYY%%MM%%DD%
+SET DT=%YY%%MM%%DD%
 SET masterStyle=../eheathwiki_pdfstyle.css
 SET rulerScript=../makeruler.js
 SET germanStyle=../lang_de.css
@@ -26,8 +26,8 @@ SET frenchStyle=../lang_fr.css
 REM This is for customizing this script for the given specification
 SET SourceDe=http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-RESP_(specification)
 SET SourceFr=http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-RESP_(specification)/fr
-SET DestinationDe=CDA-CH-RESP_de_V%DT%.pdf 
-SET DestinationFr=CDA-CH-RESP_fr_V%DT%.pdf 
+SET DestinationDe=%DT%_CDA-CH-RESP_de.pdf
+SET DestinationFr=%DT%_CDA-CH-RESP_fr.pdf
 ECHO %DestinationDe%
 ECHO %DestinationFr%
 

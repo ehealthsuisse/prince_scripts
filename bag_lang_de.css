@@ -1,0 +1,8 @@
+/*
+** Prince Stylesheet for localized output of Pages and TOC
+** Copyright Johannes Gnaegi, eHealth Suisse
+*/
+
+#toctitle {
+	string-set: toctt "Inhaltsverzeichnis";
+}
