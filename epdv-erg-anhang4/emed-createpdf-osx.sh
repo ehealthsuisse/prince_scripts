@@ -20,7 +20,7 @@ fileStyle=emed.css
 
 
 Source="http://e-health-wiki.ch/index.php/epdv:EMedikation"
-Destination=$d"_epdv_anhang4_ergaenzung_emedikation.pdf"
+Destination="SR 816.111.1_Ergaenzung 2 Anhang 5_DE.pdf.pdf"
 
 # Please do not change the lines below
 prince $Source -v --script $rulerScript --javascript -o $Destination -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000"   -s "http://e-health-wiki.ch/index.php?title=-&action=raw&maxage=18000&gen=css"   -s "http://e-health-wiki.ch/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000" -s $germanStyle -s $fileStyle -s $masterStyle

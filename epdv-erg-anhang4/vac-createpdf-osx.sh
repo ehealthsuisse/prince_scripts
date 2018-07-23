@@ -18,7 +18,7 @@ rulerScript=../makeruler.js
 # GERMAN
 # This is for customizing this script for the given specification
 Source="http://e-health-wiki.ch/index.php/epdv:Impfdossier"
-Destination=$d"_epdv_anhang4_ergaenzung_impfdossier.pdf"
+Destination="SR 816.111.1_Ergaenzung 1 Anhang 5_DE.pdf.pdf"
 #language settings
 germanStyle=../lang_de.css
 #file specific settings

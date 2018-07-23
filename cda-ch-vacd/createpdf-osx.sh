@@ -31,7 +31,7 @@ prince $Source -v --script $rulerScript --javascript -o $Destination -s "http://
 # ******************
 # FRENCH
 # This is for customizing this script for the given specification
-Source="http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-VACD_(specification)"
+Source="http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-VACD_(specification)/fr"
 Destination=$d"_CDA-CH-VACD_fr.pdf"
 frenchStyle=../lang_fr.css
 

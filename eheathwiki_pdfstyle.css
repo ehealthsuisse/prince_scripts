@@ -248,7 +248,7 @@ td.diff-context {
  */
 
 body {
-	font-family:             Garamond, serif;
+	font-family:             Garamond, sans-serif;
 	/*font-size-adjust: 0.39;*/
 	background-color:               white;
 }
@@ -434,7 +434,7 @@ Stylesheet fuer die Druckausgabe
 body {
 	margin: 0;
 	padding: 0;
-	font: 9pt Arial, Palatino, "Times New Roman", Times, serif;
+	font: 9pt Arial, Palatino, "Times New Roman", Times, sans-serif;
 	background: transparent;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -586,7 +586,7 @@ img.left {
 	float: right;
 }
 .left {
-	float: left
+	float: left;
 }
 
 
@@ -615,7 +615,6 @@ img.left {
 
   @top-right { 
     content: string(title);
-    font-style: italic;
   /*
     string-set: burl "(vr50-" counter(page) ".svg)";
     string-set: burl "http://wiki.hl7.de/images/thumb/Under_construction_icon-blue.svg/48px-Under_construction_icon-blue.svg.png";
@@ -755,8 +754,6 @@ div.print-document-information {
 	color: #000;
 	border-left: 0mm solid #fff;
 	height: 250mm;
-    
-    /*prince-script(removeHiddenNodesByClass, "remove-when-print");*/
 }
 .gdk-bag-header {
     text-align:left;
@@ -789,7 +786,6 @@ div.print-document-information {
 }
 .doc-type {
 	font-size: 1.5em;
-	font-style: italic;
 	text-align: left;
 	padding-top: 3em;
 }
@@ -799,7 +795,6 @@ div.print-document-information {
 	padding-top: 3em;
 }
 .doc-status {
-	font-style: italic;
 	text-align: left;
 	padding-top: 3em;
 }
@@ -946,7 +941,7 @@ ul.toc > li.chapter::before {
 	margin: 2em 0 0.5em 0;
 	clear: both;
 	font-weight: bold;
-*/
+
 }
 #toc {
 	border: 1px solid #fff !important;
@@ -957,7 +952,6 @@ ul.toc > li.chapter::before {
 @page table-of-contents {
     @top-right { 
     	content: string(toctt);
-    	font-style: italic;
   	}
   	@bottom-center {
     	content: counter(page, lower-roman);
@@ -1154,7 +1148,7 @@ table.versionbox td:nth-child(2) {
 }
 table.versionbox td:nth-child(5)  {
 	width: 150px;;
-}*/
+}
 table.usecase {
 font-size:50%;
 }
