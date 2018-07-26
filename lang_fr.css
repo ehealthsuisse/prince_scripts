@@ -12,5 +12,5 @@ body {
   }
 }
 #toctitle {
-	string-set: toctt "Sommaire";
+	content: "Sommaire" !important;
 }

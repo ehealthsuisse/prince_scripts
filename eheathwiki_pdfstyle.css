@@ -12,14 +12,8 @@ a.stub, a.new {
 	text-decoration:none;
 }
 #toc {
-	/*border:1px solid #2f6fab;
-    border:1px solid #aaaaaa;
-	background-color:#f9f9f9;*/
 	padding:5px;
 }
-/*.tocindent {
-	margin-left: 2em;
-}*/
 .tocline {
 	margin-bottom: 0px;
 }
@@ -305,13 +299,6 @@ blockquote {
 	border-left:      0.5em solid gray;
 	padding-left:     1.0em;
 }
-/*	Footer etc.	*/
-/*h1, h2.untertitel,
-address, address+p
-{
-	text-align:              center;
-}
-*/
 address {
 	margin-top:       2em;
 	border-top:       medium solid #EEE;
@@ -393,23 +380,23 @@ td, tbody th {
 	text-align:              left;*/
 }
 h1 {
-	page-break-before: always;
-	font-size:        1.4em;
+	page-break-before: always !important;
+	font-size:        1.5em !important;
 }
 h2 {
-	font-size:        1.3em /*; page-break-before: always*/
+	font-size:        1.3em !important;
 }
 h3 {
-	font-size:        1.2em
+	font-size:        1.2em !important;
 }
 h4 {
-	font-size:        1.1em
+	font-size:        1.1em !important;
 }
 h5 {
-	font-size:        1.0em
+	font-size:        1.0em !important;
 }
 h6 {
-	font-size:        1.0em
+	font-size:        1.0em !important;
 }
 /*
  *	Links
@@ -434,31 +421,14 @@ Stylesheet fuer die Druckausgabe
 body {
 	margin: 0;
 	padding: 0;
-	font: 9pt Arial, Palatino, "Times New Roman", Times, sans-serif;
+	font: 9pt Arial, Palatino, sans-serif !important;
 	background: transparent;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
+	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif !important;
 	font-weight: bold;
-	margin: .75em 0 .5em 0;
+	margin: .75em 0 .5em 0 !important;
 	color: black;
-}
-h2 {
-	font-size: 1.3em;
-	/*text-transform: uppercase; 
-    letter-spacing: .05em;*/
-}
-h3 {
-	font-size: 1.1em;
-}
-h4 {
-	font-size: 1.0em;
-}
-h5 {
-	font-size: 1.0em;
-}
-h6 {
-	font-size: 1.0em;
 }
 ol, ul, li {
 	font-size:  1.0em;
@@ -473,11 +443,6 @@ p {
 	orphans: 3;
 	widows: 3;
 }
-/*p+p {
-  margin-top: -1em;
-  text-indent: 2em;
-}
-*/
 
 code {
 	font-size: .76em; /* Code wird sonst viel zu gross gerendert */
@@ -489,29 +454,11 @@ a, a:visited, a:hover, a:visited:hover {
 	color: #04667e;
 	background: transparent;
 	text-decoration: none;
+	border:none !important;
 }
 a img {
 	border: none;
 }
-/* Diese Regel fuegt in CSS2-Browsern die Link-Adresse hinter Links ein. */ 
-/*a:link:after, a:link:visited:after {
-
-  content: " (Link auf <" attr(href) ">) ";
-
-  font-size: 76%;
-  color: #999;
-
-  background: transparent;
-}*/
-
-
-/* Bei internen Links muss noch die eigene Domain ausgegeben werden */
-
-/*a[href^="/"]:link:after {
-
-  content: " (Link auf <http://style-sheets.de " attr(href) ">) ";
-
-}*/
 
 /* Innerhalb von Beispielen und Versionbox sind ausgedruckte URLs unerwuenscht */
 .beispiel a:link:after, .beispiel a:link:visited:after, 
@@ -556,7 +503,6 @@ div.beispiel {
 }
 h1 {
 	padding-bottom: 1px;
-	/*border-bottom: 1px #aaaaaa solid;*/
 }
 
 #firstHeading
@@ -586,59 +532,19 @@ img.left {
 	float: right;
 }
 .left {
-	float: left;
+	float: left
 }
 
 
 /* set headers and footers */
 
 @page {
-    size: A4;
-    /* ruler sidebar */
-    /*
-    string-set: burl "vr50.svg";
-    background: url(vr50.svg) no-repeat -27mm 0 fixed;
-    background-size: 100% 100%;
-    */
-    /*
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 40 40' height='25' width='25' xmlns='http://www.w3.org/2000/svg'><text x='10' y='10' fill='red'>11</text><path fill='rgb(91, 183, 91)' d='M2.379, 14.729L5.208,11.899L12.958,19.648L25.877,6.733L28.707,9.561L12.958,25.308Z'/></svg>");
-    */
-    /*
-    string-set: burl "vr50-" counter(page) ".svg";
-    background-image: url("http://wiki.hl7.de/images/thumb/Under_construction_icon-blue.svg/48px-Under_construction_icon-blue.svg.png");
-    content: attr("url", burl);
-    background-repeat: no-repeat;
-    margin: 2cm;
-    */
-    /*font: 11pt/1.3 "Gentium", serif;*/
-    
+    size: A4;    
 
   @top-right { 
-    content: string(title);
-  /*
-    string-set: burl "(vr50-" counter(page) ".svg)";
-    string-set: burl "http://wiki.hl7.de/images/thumb/Under_construction_icon-blue.svg/48px-Under_construction_icon-blue.svg.png";
-    /*background-image: url (string(burl)) ;
-    background-image: url(data:image/gif;base64,R0lGODlhEAAQAOZ3AHe8YHO6XDSBLIe4cF+eUKDZlq/fppfVi6vUnLTZparUnW61WFaYSJbUi4/CfTmFMH2+Z73ktpbTiXeuY0CJNnnBZNTrz4e4cbXbqI7MhHzDa7jdr1OWRZXUimyqWkKNNrvcr3i0ZIm+eIrCec7pyVCZQXy6ZKbQloXNeZPNiKDZlWirU3DBY0KLOODy3LbdrESMOrLbqInIf42+e53YknG+X3rGa2WrVYHMdXS3XLfgr7PZpZfMhTSCLMXowJTTirfaqrTapqXbm2+1WLXfrKbPlm+1WX25a3WsYT2INGajVmuqWH6yaXyxZzeEL0OPOHqvZUeOPLPdqYO1bZnRi5jMinm9bsvmw37Hb6TOlGmlWH25an28Zn7BabTdqobJejyHMozLgV2cTY7Sg5LFgICzatzx2K/fpX+5bXS3W5jMh4rPfYbJfNfu0oS2bmqsW77itleeRXK5W5jLhpfHhXC4Wf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHcALAAAAAAQABAAAAengHeCg4SFhnduZU0Th4MXWVcWJBtoWocDIC4RQgVnPiMEhQNAZjQpGQ0dYzpHDIR0bSo/MnZ2KBpYRHGDUy8GYWxWtW8AAVRkUYJMcAdftc92dV0KLYJQUms40LV1EAhJgkhVEjYsN9x1cjwzD4MrXhU1ANwLOUFPhEpbMcV1RkNpdnjoUUhMCAxquJiYk2CJgEMcSjg4UUTEh4eN7sCgAMZJxo+DAgEAOw==) !important;
-    
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 40 40' height='25' width='25' xmlns='http://www.w3.org/2000/svg'><text x='10' y='10' fill='red'>" counter(page) "</text><path fill='rgb(91, 183, 91)' d='M2.379, 14.729L5.208,11.899L12.958,19.648L25.877,6.733L28.707,9.561L12.958,25.308Z'/></svg>");
-    */
-    /*
-    prince-script(chbgi, counter(page)) ;
-    background-repeat: no-repeat;
-    background-attachment: 20 0 fixed;
-    background-position: 100% 100%;
-    
-    */
+
   }
   @top-left {
-      
-    /*content: string(source);
-    string-set: burl "vr50-" counter(page) ".svg";
-    font-style: italic;
-    content: "x-" "vr50-" counter(page) ".svg";
-    */
-
    }
   @top-left-corner {
     /* ruler sidebar */
@@ -655,20 +561,8 @@ img.left {
     @bottom { content: normal }
 }
 
-/*
-@page:left { 
-    @top { content: normal }
-    @bottom { content: normal }
-}
-@page:right { 
-    @top { content: normal }
-    @bottom { content: normal }
-}
-*/
-
 
 #siteSub { 
-	/*string-set: source content() */
 	display: none ;
 }
 
@@ -677,9 +571,6 @@ img.left {
 }
 
 h1.firstHeading { 
-  /*float: top; */
-  /*string-set: title content();*/
-  /* content: "XYZ2";*/
   padding-bottom: 0.2em;
   border-bottom: thin solid black;
   margin-bottom: 1em;
@@ -737,11 +628,6 @@ div, img {
 img.thumbborder { border: thin solid black }
 
 .print-document-logohead-left {
-	/*text-align: center;
-	margin-left: auto;
-    margin-right: auto;
-	padding: 20 20 0 0 ;
-    float:left;*/
 }
 div.online-document-information,
 div.online-document-part {
@@ -759,12 +645,6 @@ div.print-document-information {
     text-align:left;
 }
 .doc-logohead-left {
-	/*display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20 20 0 0 ;
-	width: 20%;
-    clear:both; */
     float:left;
     margin: 2px;
     
@@ -845,33 +725,27 @@ h4 {
     counter-increment: h4;
     counter-reset: h5;
 }
-/*h5 {
-    counter-increment: h5;
-}*/
 
 h1:before {
     content: counter(h1) " ";
-    display: inline-block;
+    display: inline-block !important;
     width: 65px; 
 }
 h2:before {
     content: counter(h1) "." counter(h2) " ";
-    display: inline-block;
-    width: 65px; 
+    display: inline-block !important;
+    width: 65px !important; 
 }
 h3:before {
     content: counter(h1) "." counter(h2) "." counter(h3) " ";
-    display: inline-block;
+    display: inline-block !important;
     width: 65px; 
 }
 h4:before {
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
-    display: inline-block;
+    display: inline-block !important;
     width: 65px; 
 }
-/*h5:before {
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
-}*/
 
 #pageruler {
   white-space: pre;
@@ -887,53 +761,22 @@ p11111:before {
   counter-increment: linecounter;
 }
 
+#toc h2 {
+	string-set: toctt "Sommaire";
+	content: "Sommaire" !important;
+}
+/* TOC */
 .tocnumber { 
 	display: none; 
 }
 #toctitle {
-	content: string(toctt);
-	font-size: 1.4em;
+	content: string(toctt) !important;
+	font-size: 1.4em !important;
 	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
 	font-weight: bold;
-	margin: .75em 0 .5em 0;
+	margin: .75em 0 .5em 0 !important;
     color: black;
 }
-
-/*
-ul.toc, ul.toc ul { 
-  list-style-type: none;
-  margin: 0; padding: 0;
-}
-ul.toc ul {
-  margin-left: 1em;
-  font-weight: normal;
-}
-ul.toc > li { 
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-ul.toc a::after {
-  content: leader('.') target-counter(attr(href), page);
-  font-style: normal;
-}
-ul.toc > li.frontmatter a::after {
-  content: leader('.') target-counter(attr(href), page, lower-roman);
-  font-style: normal;
-}
-ul.toc > li.endmatter a::after {
-  content: leader('.') target-counter(attr(href), page);
-  font-style: normal;
-}
-ul.toc > li.chapter::before {
-  content: "Chapter " counter(toc-chapter, decimal);
-  display: block;
-  margin: 1em 0 0.1em -1cm;
-  font-weight: normal;
-  counter-increment: toc-chapter;
-  page-break-after: avoid;
-}
-*/
-
 #toc::before {
 	font-size:1.5em;
 	line-height: 1.2;
@@ -941,7 +784,6 @@ ul.toc > li.chapter::before {
 	margin: 2em 0 0.5em 0;
 	clear: both;
 	font-weight: bold;
-
 }
 #toc {
 	border: 1px solid #fff !important;
@@ -951,9 +793,8 @@ ul.toc > li.chapter::before {
 }
 @page table-of-contents {
     @top-right { 
-    	content: string(toctt);
   	}
-  	@bottom-center {
+  	@bottom-right {
     	content: counter(page, lower-roman);
     	vertical-align: top;
     	padding-top: 1em;
@@ -968,10 +809,17 @@ ul.toc > li.chapter::before {
 .toc li { 
   list-style-type: none;
 }
+
 #toc ul ul, .toc ul ul, #toc ul li, #toc li {
-	margin: 0; 
-	padding: 0;
+	margin: 0 !important; 
+	padding: 0 !important;
 }
+#bodyContent li.toclevel-1 a, 
+#bodyContent li.toclevel-2 a, 
+#bodyContent li.toclevel-3 a, 
+#bodyContent li.toclevel-3 a {
+ display:inline;
+} 
 
 #bodyContent li.toclevel-1 a:after {
   content: leader('.') target-counter(attr(href, url), page);
@@ -983,21 +831,22 @@ ul.toc > li.chapter::before {
 #bodyContent li.toclevel-2 {
     font-weight: normal;
 }
-
 #bodyContent .toctext:before {
 	display: inline-block;
     width: 65px; 
 }
+#bodyContent .toctext {
+display: inline-block !important;
+}
 
 #bodyContent li.toclevel-1 .toctext:before {
     content: counter(toc_chapter) " ";
-    
 }
  
 #bodyContent li.toclevel-1  {
     counter-increment: toc_chapter;
     counter-reset: toc_h2;
-    padding-top: 0.7em;
+    padding-top: 0.7em !important;
 }
  
 #bodyContent li.toclevel-2 .toctext:before {
@@ -1031,18 +880,21 @@ ul.toc > li.chapter::before {
 	content: counter(toc_chapter) "." counter(toc_h2) "." counter(toc_h3) "." counter(toc_h4) "." counter(toc_h5) " ";
 	counter-increment: toc_h5; 
 }
+
+
+
 a[href^="#"]::before {
-    content: '"' prince-script(crossRefCounter, 
+    content: prince-script(crossRefCounter, 
     target-counter(attr(href), h1), 
     target-counter(attr(href), h2),target-counter(attr(href), h3), 
     target-counter(attr(href), h4), target-counter(attr(href), h5), 
     target-counter(attr(href), h6), target-counter(attr(href), h7)) " ";
     
 }
-a[href^="#"]::after {
+/*a[href^="#"]::after {
     content: '"';
     
-}
+}*/
 
 a[href^="#"] {
  prince-text-replace: "#" "";
@@ -1075,32 +927,6 @@ content: none;
     hyphens: none;
     prince-hyphens: none;
     font-size: 80% !important;
-}
-
-/*
- eHealth Suisse
- */
-
- h1 {
-	page-break-before: always;
-	font-size:        1.5em;
-	right: 20%;
-}
-h2 {
-	font-size:        1.2em /*; page-break-before: always*/
-	right: 20%;
-}
-h3 {
-	font-size:        1.1em
-}
-h4 {
-	font-size:        1.1em
-}
-h5 {
-	font-size:        1.0em
-}
-h6 {
-	font-size:        1.0em
 }
  
 sup.reference a {
@@ -1164,17 +990,20 @@ a.external.text:after, a.external.autonumber:after, a:link:visited:after {
     content:"" !important;
 }
 
-/*==================================================
- CSS style sheet for Wikipedia articles example from princexml.com
- 
- Written by Hakon Wium Lie March 2008.
- ==================================================*/
 
-/* remove those pesky '' characters */
-
-/*body { prince-text-replace: "'" "\2019" }*/
-
-
-/* remove visible markers references */
-
-/*ol.references li a[href|="#cite_ref"] { display: none }*/
+/*Delete after Troubleshooting from 24.07.2018 - problem: output different since May, reason unclear*/
+/*a, p {
+color: red !important;
+font: 9pt Arial, Palatino, sans-serif !important;
+}
+.mw-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr .toc ul ul {
+margin-left: 0px !important;
+}*/
+h2 {
+border-bottom: none !important;
+font-size: 1.3em !important;
+}
+.toc h2:before {
+content: "" !important;
+width:0 !important;
+}
