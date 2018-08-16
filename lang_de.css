@@ -9,5 +9,10 @@
 }
 
 #toctitle {
+	content: "Inhaltsverzeichnis" !important;
+}
+
+#toc h2 {
 	string-set: toctt "Inhaltsverzeichnis";
+	content: "Inhaltsverzeichnis" !important;
 }

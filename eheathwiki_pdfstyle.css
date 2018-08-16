@@ -761,10 +761,6 @@ p11111:before {
   counter-increment: linecounter;
 }
 
-#toc h2 {
-	string-set: toctt "Sommaire";
-	content: "Sommaire" !important;
-}
 /* TOC */
 .tocnumber { 
 	display: none; 
@@ -988,6 +984,11 @@ a.external.text, a.external.autonumber, a.external:link:visited {
 }
 a.external.text:after, a.external.autonumber:after, a:link:visited:after {
     content:"" !important;
+}
+
+table.artdecor table {
+margin-top:0 !important;
+margin-bottom:0 !important;
 }
 
 

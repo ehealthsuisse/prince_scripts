@@ -11,6 +11,8 @@ body {
       content: "Page " counter(page) " de " counter(pages);
   }
 }
-#toctitle {
+
+#toc h2 {
+	string-set: toctt "Sommaire";
 	content: "Sommaire" !important;
 }
